@@ -4,7 +4,7 @@
 FZF_COMMAND="fzf-tmux"
 
 # Sessions & Windows
-TARGET_SPEC="#{session_id}:#{window_id}: Session #{session_name} -> #{window_name}"
+TARGET_SPEC="#{session_id}:#{window_id}: #{session_name} -> #{window_name}"
 
 # select windows
 LINE=$(tmux list-windows -a -F "$TARGET_SPEC" | $FZF_COMMAND) || exit 0
